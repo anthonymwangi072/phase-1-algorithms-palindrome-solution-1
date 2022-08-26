@@ -1,20 +1,18 @@
-function isPalindrome(word) {
+function reverseString(word) {
   // create an array from the input string
-  if(word === "abba"){
-    return true;
-    //condition is met if the if statement condition returns a truthy value. 
-  }else if(word === "racecar"){
-   return true; 
-   //else if statement comes in to query our second condition if the return value is truthy the code goes to the next line.
-  }else if(word === 'a'){
-    return true;
-  //else if statement comes in to query our second condition if the return value is truthy the code goes to the next line.
-  }else{
-    return false;
+  const wordArray = word.split("");
+  // reverse the array
+  const reversedWordArray = wordArray.reverse();
+  // create a string from the reversed array
+  const reversedWord = reversedWordArray.join("");
+  // return the reversed string
+  return reversedWord;
+}
+function isPalindrome(word) {
 
-  }
-
-
+  const reversedWord = reverseString(word);
+  // compare the reversed string to the input
+  return word === reversedWord;
 }
 
 /* 
@@ -37,4 +35,4 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 }
 
-module.exports = isPalindrome;
+module.exports = isPalindrome
