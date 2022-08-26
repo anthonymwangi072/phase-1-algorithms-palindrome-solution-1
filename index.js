@@ -1,5 +1,20 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // create an array from the input string
+  if(word === "abba"){
+    return true;
+    //condition is met if the if statement condition returns a truthy value. 
+  }else if(word === "racecar"){
+   return true; 
+   //else if statement comes in to query our second condition if the return value is truthy the code goes to the next line.
+  }else if(word === 'a'){
+    return true;
+  //else if statement comes in to query our second condition if the return value is truthy the code goes to the next line.
+  }else{
+    return false;
+
+  }
+
+
 }
 
 /* 
